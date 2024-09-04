@@ -1,0 +1,22 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+    <title>School Details</title>
+{% endblock %}
+
+{% block body_block %}
+
+<center>
+<h1>Details informations of {{schoolobj.sname}}</h1>
+<h2>{{schoolobj.sname}}</h2>
+<h2>{{schoolobj.spricipal}}</h2>
+<h2>{{schoolobj.slocation}}</h2>
+
+<h1>Student details:</h1>
+{% for STD in schoolobj.students.all %}
+    <h2>Name of the Student is {{STD.stname}}</h2>
+    <h2>Name of the Student is {{STD.stage}}</h2>
+{% endfor %}
+</center>
+
+{% endblock %}
